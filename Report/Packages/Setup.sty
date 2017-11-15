@@ -1,0 +1,292 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{./Packages/Setup}
+%%++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+%% MY PACKAGE COLLECTION:
+%%
+%% Beschreibung:
+%% In diesem Package sind wichtige und nützliche Packages
+%% zusammengefasst. Teilweise ist ein kurze Beschreibung angeführt.
+%%++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+%%
+\def\Ersteller{Dominik Schönberger}
+\def\PackageName{General setup for documents}
+%%
+%%++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+%%======================================================================
+%%            SVN-Revision
+%%----------------------------------------------------------------------
+\def\MyCollectionVersion{$Revision$}
+%%
+%% $Revision$
+%% $Author$
+%% $Date$
+%%
+%%======================================================================
+%%++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+%%            DOKUMENTLAYOUT
+%%======================================================================
+%%            Seitenränder
+%%----------------------------------------------------------------------
+\geometry{left=4.00cm, right=2.00cm, top=3.50cm, bottom=2.00cm}
+\setlength{\topmargin}{0cm}
+\setlength{\footskip}{\baselinestretch\baselineskip}
+\parskip1.5ex plus0.5ex minus0.5ex	% flexibler Absatzabstand
+\raggedbottom
+%%
+%%======================================================================
+%%            Kopf- & Fußzeile
+%%----------------------------------------------------------------------
+\KOMAoptions{%
+	headsepline = true,%
+	autooneside = false,%
+	automark%
+}%
+\pagestyle{scrheadings}%
+%%
+%%======================================================================
+%%++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+%%            DOKUMENTDATEN
+%%======================================================================
+%%            Variablen
+%%----------------------------------------------------------------------
+%% Defaultwert festlegen:
+\newcommand{\@colLin}{Yes}
+\newcommand{\@docTitle}{}
+%%----------------------------------------------------------------------
+%% Farbige Links:
+%% (Verweise auf Bilder/Tabellen/Literatur und URL's)
+\newcommand{\ColoredLinks}[1]
+{
+	\renewcommand{\@colLin}{#1}
+}
+%%----------------------------------------------------------------------
+%% Titel im Dokument verfügbar machen:
+\newcommand{\docTitle}%
+{%
+	\renewcommand{\@docTitle}{\@title}%
+}
+%%======================================================================
+%%            Befehle
+%%----------------------------------------------------------------------
+%% Bachslash:
+\newcommand{\bs}{\char '134}
+%%
+%% Tabulator im Inhaltsverzeichnis
+\newcommand{\TabContent}[1]
+{
+	\RedeclareSectionCommands[tocnumwidth=#1]{section,subsection,subsubsection,paragraph}	
+}
+%%----------------------------------------------------------------------
+%% Trennstrich
+\newcommand{\trennstrich}
+{%
+	\nopagebreak[4]%
+ 	\vskip 1.5ex%
+	\nopagebreak[4]%
+ 	\noindent%
+	\makebox[\textwidth]{\rule{4cm}{0.4pt}}%
+	\vskip 2.5ex%
+}
+%%----------------------------------------------------------------------
+% Metadaten fürs Dokument neu schreiben:
+\newcommand{\writeMetadatenPDF}
+{
+	\hypersetup
+	{
+		pdfauthor={\@author},		% Autor der Arbeit
+		pdfsubject={\@title},		% Titel der Arbeit
+	}
+}
+%%----------------------------------------------------------------------
+% Link-Farbe setzen
+\newcommand{\setLinkColor}
+{
+	\ifthenelse{\equal{\@colLin}{No}}%
+	{%
+		\hypersetup{colorlinks=false}%
+	}%
+	% else
+	{%
+		\hypersetup{colorlinks=true}%
+	}%
+}
+%%----------------------------------------------------------------------
+% Spaltentypen für Tabellen:
+%horizontal und vertikal zentriert
+\newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}}	
+%vertikalzentriert
+\newcolumntype{V}[1]{>{\arraybackslash}m{#1}}
+%horizontal zentriert
+\newcolumntype{H}[1]{>{\centering}m{#1}}
+%%----------------------------------------------------------------------
+%% Zeilenhöhe ändern:
+\renewcommand{\arraystretch}{1.4}
+%%======================================================================
+%%            Abkürzungen
+%%----------------------------------------------------------------------
+%% Deutsch:
+\newcommand{\bzw}{bzw.\@\xspace}
+\newcommand{\bzgl}{bzgl.\@\xspace}
+\newcommand{\ca}{ca.\@\xspace}
+\newcommand{\dah}{d.\thinspace{}h.\@\xspace}
+\newcommand{\Dah}{D.\thinspace{}h.\@\xspace}
+\newcommand{\ds}{d.\thinspace{}sind\@\xspace}
+\newcommand{\evtl}{evtl.\@\xspace}
+\newcommand{\ua}{u.\thinspace{}a.\@\xspace}
+\newcommand{\Ua}{U.\thinspace{}a.\@\xspace}
+\newcommand{\usw}{usw.\@\xspace}
+\newcommand{\va}{vor allem\@\xspace}
+\newcommand{\vgl}{vgl.\@\xspace}
+\newcommand{\zB}{z.\thinspace{}B.\@\xspace}
+\newcommand{\ZB}{Zum Beispiel\xspace}
+\newcommand{\sa}{s.\ auch\@\xspace}
+\newcommand{\ia}{i.\thinspace{}Allg.\@\xspace}
+\newcommand{\su}{s.\ unten\@\xspace}
+\newcommand{\uvm}{u.\thinspace{}v.\thinspace{}m.\@\xspace}
+\newcommand{\uva}{u.\thinspace{}v.\thinspace{}a.\@\xspace}
+\newcommand{\uae}{u.\thinspace{}Ä.\@\xspace}
+\newcommand{\mn}{min.\@\xspace}
+\newcommand{\mx}{max.\@\xspace}
+\newcommand{\etc}{etc.\@\xspace}
+\newcommand{\ggf}{ggf.\@\xspace}
+\newcommand{\oA}{o.\thinspace{}A.\@\xspace}
+%%
+%%----------------------------------------------------------------------
+%% Englisch:
+\newcommand{\eg}{e.g.\@\xspace}
+\newcommand{\ie}{i.\thinspace{}e.\@\xspace}
+\newcommand{\cf}{cf.\@\xspace}
+\newcommand{\Cf}{Cf.\@\xspace}
+%%
+%%----------------------------------------------------------------------
+%% Allgemein:
+%%
+%%======================================================================
+%%            PDF-Metadaten
+%%----------------------------------------------------------------------
+%\usepackage[plainpages=false,pdfpagelabels,pdftex]{hyperref}
+%%
+% Metainformationen:
+\hypersetup{
+	pdfauthor={\@author},		% Autor der Arbeit
+	pdftitle={},				% Typ der Arbeit
+	pdfsubject={\@title},		% Titel der Arbeit
+	pdfkeywords={},				% Stichwörter für das Dokument
+	pdfproducer={MiKTeX},		% Mit welchem Programm wurde das PDF erstellt
+	bookmarksopen=true,			% Anzeige sämtlicher Lesezeichen
+	linkcolor=blue,				% Farbe der internen Verweise
+	citecolor=blue,				% Farbe für Zitate
+	urlcolor=blue,				% Farbe für URL's
+	colorlinks=true,
+	linkbordercolor=0 0 0,
+	urlbordercolor=0 0 0,
+	pdfborder=0 0 0,  			% Keine Box um die Links!
+}
+%%======================================================================
+%%++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+%%
+%%++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+%%            DOKUMENTEINSTELLUNGEN
+%%======================================================================
+%%            Allgemeine Layouteinstellungen
+%%----------------------------------------------------------------------
+\frenchspacing     	  	% erzeugt normale Abstände zwischen Sätzen
+\onehalfspacing			% 1,5-facher Zeilenabstand
+%%
+%%======================================================================
+%%            Gliederung
+%%----------------------------------------------------------------------
+%%	
+\newcommand{\ssc}[1]{{\normalfont{\textsc{#1}}}}
+%% mit "\scc" sind Kapitälichen in Überschrift möglich
+%%
+%%======================================================================
+%%            Einstellungen automatischer Seitenwechsel
+%%----------------------------------------------------------------------
+\renewcommand{\floatpagefraction}{.75} 	% vorher: .5
+\renewcommand{\textfraction}{.1}		% vorher: .2
+\renewcommand{\topfraction}{.8}			% vorher: .7
+\renewcommand{\bottomfraction}{.5}		% vorher: .3
+\setcounter{topnumber}{3}			 	% vorher: 2
+\setcounter{bottomnumber}{2}			% vorher: 1
+\setcounter{totalnumber}{5}				% vorher: 3
+%%
+%%======================================================================
+%%            Source-Codes
+%%----------------------------------------------------------------------
+%%
+%% Allgemein:
+\definecolor{listinggray}{gray}{0.9}
+\definecolor{lbcolor}{rgb}{1,1,1}
+%%
+%% Definition des Styles für die "FHWels"-Listings:
+\lstdefinestyle{FHWelsStyle}{
+	basicstyle=\scriptsize{},
+	backgroundcolor=\color{white},			% Hintergrundfarbe
+	frame=single, rulecolor=\color{black},	% Rahmenstyle und Farbe	
+	captionpos=t,							% Listingüberschrift
+	numbers=left, numberstyle=\tiny,		% Zeilennummerierung
+	tabsize=3,								% Anzahl der Zeichen für Tabulator
+	showtabs=false,							% legt fest, ob die Tabs angezeigt werden
+	showspaces=false,						% legt fest, ob die Leerzeichen angezeigt werden
+	showstringspaces=false,					% Leerzeichen im String werden nicht markiert 
+	upquote=true,							% legt den Style der Anführungszeichen "'` fest
+	aboveskip={0.5\baselineskip},			% legt den Abstand vor der Listing fest
+	belowskip={0.5\baselineskip},			% legt den Abstand nach der Listing fest
+	columns=fixed,							% jedes Zeichen benötigt den selben Platz
+	extendedchars=true,						% Umlaute können verwendet werden
+	breaklines=true,						% automatischer Zeilenumbruch
+	prebreak = \raisebox{0ex}[0ex][0ex]{\ensuremath{\hookleftarrow}},
+	breakautoindent = true,						% umbrochene Zeile einrücken
+	identifierstyle=\ttfamily,					% Format von der "main"-Funktion
+	keywordstyle=\color[rgb]{0,0,1},			% Format von "void, while, char,..."
+	commentstyle=\color[rgb]{0,0.7,0},			% Format von Kommentaren
+	stringstyle=\color[rgb]{1,0.44,0},			% Format von Strings
+	directivestyle=\color[rgb]{0.9,0,0}			% Format von "#define"
+}
+%%
+% Default-Style auswählen:
+\lstset{language=c,style=FHWelsStyle}
+%%
+%%======================================================================
+%%            Aufzählung & Nummerierung
+%%----------------------------------------------------------------------
+%% Aufzählung:
+\renewcommand{\labelitemi}{\color{red}\textbf{--}}
+\renewcommand{\labelitemii}{\color{red}>}
+\renewcommand{\labelitemiii}{$\circ$}
+\renewcommand{\labelitemiv}{{\tiny$\blacksquare$}}
+%\renewcommand{\labelitemiv}{$\bullet$}
+%%
+%% Nummerierung:
+\renewcommand{\theenumi}{\arabic{enumi}}
+\renewcommand{\labelenumi}{\theenumi.}
+\renewcommand{\theenumii}{\alph{enumii}}
+\renewcommand{\labelenumii}{\theenumii.}
+\renewcommand{\theenumiii}{\roman{enumiii}}
+\renewcommand{\labelenumiii}{\theenumiii.}
+\renewcommand{\theenumiv}{\arabic{enumiv}}
+\renewcommand{\labelenumiv}{\theenumiv.}
+%%
+%%======================================================================
+%%            Caption-Formatierung
+%%----------------------------------------------------------------------
+% Captions mit Fontgroesse "small" und Abstand vom Seitenrand
+\captionsetup{%
+	labelfont={small,bf},%
+	textfont={small,bf}%
+}
+\setlength{\captionmargin}{5mm}			% Abstand zum Seitenradn
+\setlength{\abovecaptionskip}{10pt}		% Abstand vor der Caption
+\setlength{\belowcaptionskip}{5pt}		% Abstand nach der Caption
+%%
+%%======================================================================
+%%            Mathematik
+%%----------------------------------------------------------------------
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\Q}{\mathbb{Q}}
+%%
+%%++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++

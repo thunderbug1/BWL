@@ -1,0 +1,83 @@
+%\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{./Packages/PackageCollection}
+%%++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+%% MY PACKAGE COLLECTION:
+%%
+%% Beschreibung:
+%% In diesem Package sind wichtige und nützliche Packages
+%% zusammengefasst. Teilweise ist ein kurze Beschreibung angeführt.
+%%++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+%%
+\def\Ersteller{Dominik Schönberger}
+\def\PackageName{General collection package}
+%%
+%%++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+%%======================================================================
+%%            SVN-Revision
+%%----------------------------------------------------------------------
+\def\MyCollectionVersion{$Revision$}
+%%
+%% $Revision$
+%% $Author$
+%% $Date$
+%%
+%%======================================================================
+%%++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+%%            USEPACKAGES
+%%======================================================================
+%% Hier sind alle Usepackages angeführt!
+%% (Außer es war programmiertechnisch anders notwendig)
+%%
+%% Sprache:
+\usepackage[T1]{fontenc}						% T1-Fonts zur besseren Silbentrennung bei Umlauten etc.
+\usepackage[utf8]{inputenc}						% Sonderzeichen, Umlaute
+\usepackage{ae}									% wichtig, vermeidet Pixelfonts in PDFs
+\usepackage[english,ngerman,naustrian]{babel}	% Auswahl der Sprache(Die letzte in der Liste wird ausgewählt)
+%%
+%% Sonderzeichen
+\usepackage{textcomp}							% Sonderzeichen(Copyright, Latex-Logo,...)
+\usepackage{eurosym}							% €-Symbol
+%%
+%% Layout
+\usepackage{geometry}							% Seitenränder
+\usepackage{setspace}							% Zeilenabstand
+\usepackage{verbatim}							% Umgebung, die Latexbefehle ignoriert
+\usepackage{color}								% Farbumgebung
+\usepackage{placeins}							% der Befehl \FloatBarrier kann verwendet werden
+\usepackage{url}								% zum Darstellen von URL's
+\urlstyle{sf}									% Schriftart URL's: kursiv
+\usepackage{xspace}								% dynamisches Leerzeichen
+\usepackage{scrlayer-scrpage}					% Paket zum Ändern der Kopf-/Fußzeile
+%%
+%% Mathematik
+\usepackage{amssymb}							% diverse Sonderzeichen
+\usepackage{textgreek}							% griechische Symbole
+\usepackage{amsmath}							% Mathematik-Umgebung
+\usepackage{exscale}							% Skaliert Mathe-Modus Ausgaben in allen Umgebungen richtig
+\usepackage{amsfonts}							% Zeichen fuer die reellen, komplexen ... Zahlen (AMS Blackboard)
+%%
+%% Tabellen und Grafiken
+\usepackage{array}								% Zusatzpaket für Tabellen
+\usepackage{booktabs}							% Zusatzpaket für Tabellen
+\usepackage{colortbl}							% erlaubt farbige Zellen
+\usepackage{multicol}							% erlaubt verbundene Spalten
+\usepackage{multirow}							% erlaubt verbundene Zeilen
+\usepackage{arydshln}							% erlaubt strichlierte Rahmenlinien
+\usepackage{graphicx}							% Grafiken einfügen
+\usepackage[absolute]{textpos}					% ermöglicht das frei platzieren von Grafiken
+\usepackage{rotating}							% ermöglicht das Rotieren von Grafiken und Textfeldern
+\usepackage{caption}							% Fontgröße "small"% Captions mit Fontgroesse "small" und Abstand vom Seitenrand
+%%
+%% Zitieren
+\usepackage{cite}								% Bessere Darstellung von Zitaten
+%%
+%% sonstige Pakete:
+\usepackage{todonotes}							% ToDo-Notes können eingefügt werden
+\usepackage{ifthen}								% if-then-else Befehl
+\usepackage{nomencl}							% Abkürzungsverzeichnis
+\usepackage{listings}							% Listings-Paket (für Source-Codes)
+\usepackage{blindtext}							% Blindtext
+\usepackage{hyperref}							% Metadaten in PDF schreiben
+%%
+%%++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
