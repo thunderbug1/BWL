@@ -1,13 +1,13 @@
 \chapter{Finanzierung}
 \section{Zentrale Annahmen}
 \begin{itemize}
-	\item Förderungen/Zuschüsse sind nicht in den Berechnungen enthalten
+	\item Förderungen/Zuschüsse sind nicht in den Berechnungen für den Kapitalbedarf nicht enthalten. Diese werden \ggf für den Kapitalbedarfsausgleich verwendet.
 	\item Keine Gewinnausschüttung bzw. Bonifikationen an die Unternehmensgründer
 	\item Zahlungsziele (Kunden und Lieferanten): 30 Tage
 \end{itemize}
 
 \section{Finanzierungsmodell}
-Die Finanzierung des Unternehmen erfolgt durch 4 Säulen. 
+Die laufende Finanzierung des Geschäftsmodells erfolgt durch 4 Säulen. 
 
 \noindent
 \begin{tabular}{@{}>{\raggedright\arraybackslash}p{1.8cm}@{}>{\raggedright\arraybackslash}p{\textwidth - 1.8cm}}
@@ -18,7 +18,7 @@ Die Finanzierung des Unternehmen erfolgt durch 4 Säulen.
 	
 	\textbf{Säule 3:} & Der Roboterhersteller finanziert eine Weiterentwicklung eines bestehenden Systems. \\
 	
-	\textbf{Säule 4:} & Damit der Betreiber das System verwenden müssen seine Mitarbeiter geschult werden.
+	\textbf{Säule 4:} & Damit der Betreiber das System verwenden kann, müssen seine Mitarbeiter kostenpflichtig bei uns geschult werden.
 \end{tabular}
 
 \subsection{Entwicklungsgebühr}
@@ -32,9 +32,9 @@ Das grundlegende System unterliegt einer ständigen Weiterentwicklung. Neue Vers
 Diese kann um bis zu $20$\% verringert werden sofern entsprechende Gegenleistungen angeboten werden.
 
 \subsection{Lizenzgebühren}
-Die Verwendung des Systems verschafft dem Betreiber einen enormen Wettbewerbsvorteil. Damit der Betreiber das System verwenden kann ist eine zurzeit eine einmalige Lizenzgebühr pro Roboter fällig. Sie wird wie folgt berechnet:\\
+Die Verwendung des Systems verschafft dem Betreiber einen enormen Wettbewerbsvorteil. Damit der Betreiber das System verwenden kann ist zurzeit eine einmalige Lizenzgebühr pro Roboter fällig. Sie wird wie folgt berechnet:\\
 \begin{align*}
-	Gebühr = (((24h * 365d * \varnothing A)*P_N)*\varnothing K_{Strom}*E_N)*\frac{\varnothing B_N}{2} + IBN
+	\text{Gebühr} = [\{(24h * 365d * \varnothing A)*P_N\}*\varnothing K_{Strom}*E_N]*\frac{\varnothing B_N}{2} + IBN
 \end{align*}
 \begin{tabbing}
 	\hspace{1,8cm}\=\hspace{0,6cm}\=\kill
@@ -50,22 +50,22 @@ Die Verwendung des Systems verschafft dem Betreiber einen enormen Wettbewerbsvor
 Die Werte $P_N$ und $E_N$ sind abhängig von der Version des Systems und werden für diese immer neu ermittelt. Die durchschnittliche Betriebsdauer $\varnothing B_N$ wird mit $10$ Jahren festgelegt und die durchschnittliche Auslastung $\varnothing A$ mit $70$\%. Ausnahmen können mit dem Betreiber explizit verhandelt werden. Die $IBN$-Pauschaule ist ebenfalls ein Fixwert und mit $350$\officialeuro festgelegt. Für die durchschnittlichen Stromkosten wird der offizielle Wert der \textsf{E-CONTROL}\footnote{Energie-Control Austria für die Regulierung der Elektrizitäts- und Erdgaswirtschaft, Rudolfsplatz 13a, 1010 Wien} für Nicht-Haushalte und über $150.000$MWh/a herangezogen.\\
 Für die \textit{Version 1} des Systems ergeben sich somit die Werte in Tabelle \ref{tab:Kalkulationswerte}.
 \begin{table}[h]
-\centering
-\begin{tabular}{|c|c|}
-	\hline 
-	$\varnothing A$ & $70$\% \\ 
-	\hline 
-	$\varnothing K_{Strom}$ & $5,418\frac{\text{Cent}}{\text{kWh}}$ \\ 
-	\hline
-	$\varnothing B_N$ & $10$ Jahre \\ 
-	\hline 
-	$IBN$ & $350$\officialeuro \\ 
-	\hline 
-\end{tabular}
-\caption{Kalkulationswerte für \textit{Version 1}}
-\label{tab:Kalkulationswerte}
+	\centering
+	\begin{tabular}{|c|c|}
+		\hline 
+		$\varnothing A$ & $70$\% \\ 
+		\hline 
+		$\varnothing K_{Strom}$ & $5,418\frac{\text{Cent}}{\text{kWh}}$ \\ 
+		\hline
+		$\varnothing B_N$ & $10$ Jahre \\ 
+		\hline 
+		$IBN$ & $350$\officialeuro \\ 
+		\hline 
+	\end{tabular}
+	\caption{Kalkulationswerte für \textit{Version 1}}
+	\label{tab:Kalkulationswerte}
 \end{table}
-Eine grafische Verteilung der Lizenzgebühren für $E_N = 5,00$\% -- $50,00$\% und $P_N = 0,5$kW -- $10,0$kW ist in Abbildung \ref{fig:lizenzgebuehr} dargestellt.
+Abschließend wird die Gebühr noch auf die Hunderter-Stelle gerundet. Die Gebühr bewegt sich somit in einem Bereich von $400,00$\officialeuro -- $8.700,00$\officialeuro für $E_N = 5,00$\% -- $50,00$\% und $P_N = 0,5$kW -- $10,0$kW. Eine grafische Verteilung der Lizenzgebühr ist in Abbildung \ref{fig:lizenzgebuehr} dargestellt.
 
 \begin{figure}[h]
 	\centering
@@ -79,10 +79,10 @@ Wird eine neue Version veröffentlicht, ist es für jeden Betreiber möglich auf
 
 \subsection{Schulung}
 \subsubsection{Grundschulung}
-Die Grundschulung umfasst die Installation und Verwendung des System mit der Robotersteuerung. Die Schulung dauert 2 Tage und die Kosten betragen $800,00$\officialeuro~pro Person.
+Die Grundschulung richtet sich an die Betreiber (Inbetriebnahme) und die Hersteller (Testcenter, Schulungscenter). Sie umfasst die Installation und Verwendung des System mit der Robotersteuerung. Die Schulung dauert 2 Tage und die Kosten betragen $800,00$\officialeuro~pro Person. Die 
 
 \subsubsection{Intensivschulung}
-Im System können Parameter verändert werden um mögliche spezielle Anforderungen abdecken zu können. Wie die Parameter verändert werden können und welche Auswirkung die Veränderungen haben ist Teil der Intensivschulung. Diese dauert 3 Tage und die Kosten betragen $1.500,00$\officialeuro~pro Person.
+Diese Schulung richtet sich grundsätzlich nur an die Betreiber (Inbetriebnahme). Im System können Parameter verändert werden um mögliche spezielle Anforderungen abdecken zu können. Wie die Parameter verändert werden können und welche Auswirkung die Veränderungen haben ist Teil der Intensivschulung. Diese dauert 3 Tage und die Kosten betragen $1.500,00$\officialeuro~pro Person.
 
 \section{Basis-Scenario}
 Für das Basis-Scenario wurden folgende Annahmen getroffen:
@@ -90,43 +90,44 @@ Für das Basis-Scenario wurden folgende Annahmen getroffen:
 	\item Es werden in den folgenden 4 Jahren 20 Neuentwicklungen in Auftrag gegeben (Aufteilung:~3/5/6/6). Damit werden $~12$\% der Robotertypen der 5 wichtigsten Hersteller mit dem System ausgerüstet, siehe Kapitel \ref{sec:Marketing}.
 	\item Die Lizenzvergabe verteilt sich wie folgt:\newline (Angaben in Prozent vom weltweitem Absatz von Industrierobotern ($400.000$ Stück), siehe Kapitel \ref{sec:Marketing})
 	\begin{itemize}
-		\item 1. Jahr: $0,00$\% (0 Roboter)
-		\item 2. Jahr: $0,03$\% (~120 Roboter)
-		\item 3. Jahr: $0,09$\% (~360 Roboter)
-		\item 4. Jahr: $0,25$\% (~1000 Roboter)
+		\item 1. Jahr: 0 Roboter
+		\item 2. Jahr: 120 Roboter
+		\item 3. Jahr: 360 Roboter
+		\item 4. Jahr: 1000 Roboter
 	\end{itemize}
 	\item Die durchschnittliche Lizenzgebühr beträgt $1.500,00$\officialeuro.\\ Dies entspricht dem Mittelwert für $P_N = 1,50$kW -- $5,00$kW und $E_N = 10$\% -- $30$\%.
 	\item Es wird mit 60 Teilnehmer an der Grundschulung innerhalb der nächsten 4 Jahren gerechnet (Aufteilung:~8/12/16/24). Zusätzlich nehmen 10 Teilnehmer die Intensivschulung in Anspruch (Aufteilung: 0/2/3/5).
 \end{itemize}
 
 \subsection{Break-Even-Point}
-Der BEP wird im Basis-Szenario im 3. Jahr erreicht, siehe Abbildung \ref{fig:BasisSzenario-BEP}.
+\label{sec:BasisSzenario-BEP}
+Der BEP wird im Basis-Szenario knapp im 2. Jahr erreicht, siehe Abbildung \ref{fig:BasisSzenario-BEP}.
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=15cm]{BasisSzenario-BEP.pdf}
 	\caption{Break-Even-Point im Basis-Szenario}
 	\label{fig:BasisSzenario-BEP}
-\end{figure}
-
-\subsection{Kapitalbedarf}
-Der Kapitalbedarf bis zum BEP beträgt höchstens $220.000$\officialeuro.\\
-Um diese Lücke zu schließen, werden folgende Finanzierungsmöglichkeiten geplant:
-\begin{itemize}
-	\item Einreichung eines Antrags bei der FFG im Basisprogramm zur Förderung von Einzelprojekten.
-	\item UBG Gründerfonds
-	\item Zusätzliches Eigenkapital
-\end{itemize}
-Dadurch ergibt sich folgende Finanzierung:\\
-\begin{tabular}{l r}
-	Kapitalbedarf & $-220.000$\officialeuro \\
-	\hline
-	FFG Basisprogramm(Projektsumme: $200.000$\officialeuro) & $+100.000$\officialeuro \\
-	UBG Gründerfond & $+75.000$\officialeuro \\
-	Zusätzliches Eigenkapital & $+45.000$\officialeuro \\
-	\bottomrule
-\end{tabular}\\
-
-\noindent Kurzfristige Liquiditätsschwankungen (spätere Zahlungen der Kunden, Projektvorfinanzierung, …) werden mit einem Kontokorrentkredit abgedeckt.
+\end{figure}\\
+\\Die Umsätze und Kosten (pro Jahr und kumuliert) der nächsten 4 Jahre sind in Tabelle \ref{tab:BasisSzenario-BEP} dargestellt.
+\begin{table}[h]
+	\centering
+	\begin{tabular}{|l|c|c|c|c|}
+		\hline 
+		& 1. Jahr & 2. Jahr & 3. Jahr & 4. Jahr \\ 
+		\hline 
+		Umsätze & $400.233,63$\officialeuro & $851.504,67$\officialeuro & $1.407.161,33$\officialeuro & $2.567.895,54$\officialeuro \\
+		\hline 
+		Kosten & $585.926,40$\officialeuro & $644.140,14$\officialeuro & $850.343,73$\officialeuro & $1.269.188,56$\officialeuro \\
+		\hline 
+		kum. Umsätze & $400.233,63$\officialeuro & $1.251.738,30$\officialeuro & $2.658.899,63$\officialeuro & $5.226.795,17$\officialeuro \\
+		\hline 
+		kum. Kosten & $585.926,40$\officialeuro & $1.230.066,54$\officialeuro & $2.080.410,27$\officialeuro & $3.349.598,82$\officialeuro \\
+		\hline 
+	\end{tabular}
+	\caption{Umsätze und Kosten des Basis-Szenarios}
+	\label{tab:BasisSzenario-BEP} 
+\end{table}\\
+Dadurch ergibt sich eine maximale Differenz der kumulierten Werte von $185.692,76$\officialeuro.
 
 \subsection{Kennzahlen}
 \begin{figure}[h]
@@ -146,6 +147,7 @@ Dadurch ergibt sich folgende Finanzierung:\\
 
 \newpage
 \subsection{Liquiditätsplan}
+\label{sec:BasisSzenario-Liquidität}
 \begin{figure}[htp!]
 	\centering
 	\includegraphics[page=1,width=15cm]{BasisSzenario-Liquiditaet.pdf}
@@ -186,6 +188,31 @@ Dadurch ergibt sich folgende Finanzierung:\\
 	\end{figure}
 \end{landscape}
 
+\subsection{Kapitalbedarf}
+Die zurzeit aufgestellt Bilanz wurde unter der Annahme erstellt, das die Differenz zwischen Kosten und Umsätzen, siehe Kapitel \ref{sec:BasisSzenario-BEP}, über den Kontokorrentkredit (Bankenfinanzierung) gedeckt werden. Grundsätzlich wird die im folgendem Absatz beschriebene alternative Finanzierung angestrebt.
+
+\subsubsection{Alternative Finazierung}
+Der Kapitalbedarf bis zum BEP beträgt inklusive einer Reserve und abzüglich der Zinsen des Kontokorrentkredites (siehe Kapitel \ref{sec:BasisSzenario-Liquidität}) höchstens $175.000$\officialeuro.\\
+Um diese Lücke zu schließen, werden folgende Finanzierungsmöglichkeiten geplant:
+\begin{itemize}
+	\item Einreichung eines Antrags bei der FFG im Basisprogramm zur Förderung von Einzelprojekten.
+	\item UBG Gründerfonds
+	\item Zusätzliches Eigenkapital
+\end{itemize}
+Dadurch ergibt sich folgende Finanzierung:\\
+\begin{tabular}{l r}
+	Kapitalbedarf & $-175.000$\officialeuro \\
+	\hline
+	FFG Basisprogramm(Projektsumme: $200.000$\officialeuro) & $+100.000$\officialeuro \\
+	UBG Gründerfond & $+75.000$\officialeuro \\
+	\bottomrule
+\end{tabular}\\
+
+\noindent Im detailliertem Liquiditätsplan ist im ersten Jahr ein Engpass ersichtlich. Dieser erfordert einen zusätzlichen Bedarf von höchstens $80.000,00$\officialeuro. Dieser kurzfristige Bedarf wird über einen Einmalkredit über eine Bank gedeckt wobei die 4 Eigentümer von \textsf{RTI} zu je einem Viertel dafür private Haften.\\
+Wird dennoch kein Kredit gewährt, verzichten die 4 Geschäftsführer in den ersten sechs Monaten auf ihr Gehalt und die Anschaffung eines Vertriebsautos wird um 1 Jahr verzögert.\\
+
+\noindent Kurzfristige Liquiditätsschwankungen (spätere Zahlungen der Kunden, Projektvorfinanzierung, …) werden über einen Kontokorrentkredit gedeckt.
+
 \newpage
 \section{Best-Case-Szenario}
 Für das Basis-Scenario wurden folgende Annahmen getroffen:
@@ -193,17 +220,17 @@ Für das Basis-Scenario wurden folgende Annahmen getroffen:
 	\item Es werden in den folgenden 4 Jahren 30 Neuentwicklungen in Auftrag gegeben (Aufteilung:~4/7/9/10). Damit werden $~17,6$\% der Robotertypen der 5 wichtigsten Hersteller mit dem System ausgerüstet, siehe Kapitel \ref{sec:Marketing}.
 	\item Die Lizenzvergabe verteilt sich wie folgt:\newline (Angaben in Prozent vom weltweitem Absatz von Industrierobotern ($400.000$ Stück), siehe Kapitel \ref{sec:Marketing})
 	\begin{itemize}
-		\item 1. Jahr: $0,00$\% (0 Roboter)
-		\item 2. Jahr: $0,05$\% (~200 Roboter)
-		\item 3. Jahr: $0,20$\% (~800 Roboter)
-		\item 4. Jahr: $1,00$\% (~4000 Roboter)
+		\item 1. Jahr: 0 Roboter
+		\item 2. Jahr: 200 Roboter
+		\item 3. Jahr: 800 Roboter
+		\item 4. Jahr: 4000 Roboter
 	\end{itemize}
 	\item Die durchschnittliche Lizenzgebühr beträgt $1.500,00$\officialeuro.\\ Dies entspricht dem Mittelwert für $P_N = 1,50$kW -- $5,00$kW und $E_N = 10$\% -- $30$\%.
 	\item Es wird mit 120 Teilnehmer an der Grundschulung innerhalb der nächsten 4 Jahren gerechnet (Aufteilung:~8/24/36/52). Zusätzlich nehmen 25 Teilnehmer die Intensivschulung in Anspruch (Aufteilung: 0/5/8/12).
 \end{itemize}
 
 \subsection{Break-Even-Point}
-Der BEP wird im Best-Case-Szenario bereits im 2. Jahr erreicht, siehe Abbildung \ref{fig:BestSzenario-BEP}.
+Der BEP wird im Best-Case-Szenario bereits Anfang des 2. Jahres erreicht, siehe Abbildung \ref{fig:BestSzenario-BEP}.
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=15cm]{BestSzenario-BEP.pdf}
@@ -212,7 +239,7 @@ Der BEP wird im Best-Case-Szenario bereits im 2. Jahr erreicht, siehe Abbildung 
 \end{figure}
 
 \subsection{Kapitalbedarf}
-Der Kapitalbedarf bis zum BEP beträgt höchstens $120.000$\officialeuro.\\
+Der Kapitalbedarf, inklusive der Berücksichtigung der Liquidität, bis zum BEP beträgt höchstens $170.000$\officialeuro.\\
 Um diese Lücke zu schließen, werden folgende Finanzierungsmöglichkeiten geplant:
 \begin{itemize}
 	\item Einreichung eines Antrags bei der FFG im Basisprogramm zur Förderung von Einzelprojekten.
@@ -220,12 +247,14 @@ Um diese Lücke zu schließen, werden folgende Finanzierungsmöglichkeiten gepla
 \end{itemize}
 Dadurch ergibt sich folgende Finanzierung:\\
 \begin{tabular}{l r}
-	Kapitalbedarf & $-120.000$\officialeuro \\
+	Kapitalbedarf & $-170.000$\officialeuro \\
 	\hline
 	FFG Basisprogramm(Projektsumme: $200.000$\officialeuro) & $+100.000$\officialeuro \\
-	UBG Gründerfond & $+20.000$\officialeuro \\
+	UBG Gründerfond & $+70.000$\officialeuro \\
 	\bottomrule
 \end{tabular}\\
+
+\noindent Im Gegensatz zum Basis-Szenario wird kein weiterer Einmalkredit benötigt.
 
 \noindent Kurzfristige Liquiditätsschwankungen (spätere Zahlungen der Kunden, Projektvorfinanzierung, …) werden mit einem Kontokorrentkredit abgedeckt.
 
@@ -236,10 +265,10 @@ Für das Basis-Scenario wurden folgende Annahmen getroffen:
 	\item Es werden in den folgenden 4 Jahren 10 Neuentwicklungen in Auftrag gegeben (Aufteilung:~1/2/3/4). Damit werden $~6$\% der Robotertypen der 5 wichtigsten Hersteller mit dem System ausgerüstet, siehe Kapitel \ref{sec:Marketing}.
 	\item Die Lizenzvergabe verteilt sich wie folgt:\newline (Angaben in Prozent vom weltweitem Absatz von Industrierobotern ($400.000$ Stück), siehe Kapitel \ref{sec:Marketing})
 	\begin{itemize}
-		\item 1. Jahr: $0,00$\% (0 Roboter)
-		\item 2. Jahr: $0,01$\% (~40 Roboter)
-		\item 3. Jahr: $0,03$\% (~120 Roboter)
-		\item 4. Jahr: $0,08$\% (~320 Roboter)
+		\item 1. Jahr: 0 Roboter
+		\item 2. Jahr: 40 Roboter
+		\item 3. Jahr: 120 Roboter
+		\item 4. Jahr: 320 Roboter
 	\end{itemize}
 	\item Die durchschnittliche Lizenzgebühr beträgt $1.500,00$\officialeuro.\\ Dies entspricht dem Mittelwert für $P_N = 1,50$kW -- $5,00$kW und $E_N = 10$\% -- $30$\%.
 	\item Es wird mit 25 Teilnehmer an der Grundschulung innerhalb der nächsten 4 Jahren gerechnet (Aufteilung:~3/5/7/10). Zusätzlich nehmen 6 Teilnehmer die Intensivschulung in Anspruch (Aufteilung: 0/2/2/2).
@@ -255,7 +284,7 @@ Der BEP wird im Worst-Case-Szenario erst im 4. Jahr erreicht, siehe Abbildung \r
 \end{figure}
 
 \subsection{Kapitalbedarf}
-Der Kapitalbedarf bis zum BEP beträgt höchstens $350.000$\officialeuro.\\
+Der Kapitalbedarf, inklusive der Berücksichtigung der Liquidität, bis zum BEP beträgt höchstens $435.000$\officialeuro.\\
 Um diese Lücke zu schließen, werden folgende Finanzierungsmöglichkeiten geplant:
 \begin{itemize}
 	\item Einreichung eines Antrags bei der FFG im Basisprogramm zur Förderung von Einzelprojekten.
@@ -263,12 +292,12 @@ Um diese Lücke zu schließen, werden folgende Finanzierungsmöglichkeiten gepla
 \end{itemize}
 Dadurch ergibt sich folgende Finanzierung:\\
 \begin{tabular}{l r}
-	Kapitalbedarf & $-350.000$\officialeuro \\
+	Kapitalbedarf & $-435.000$\officialeuro \\
 	\hline
 	FFG Basisprogramm(Projektsumme: $200.000$\officialeuro) & $+100.000$\officialeuro \\
 	UBG Gründerfond & $+75.000$\officialeuro \\
 	\bottomrule
-	Differenz: & $-175.000$\officialeuro
+	Differenz: & $-260.000$\officialeuro
 \end{tabular}\\
 
 \textbf{Maßnahmen beim Eintritt des Worst-Case-Szenarios:}
